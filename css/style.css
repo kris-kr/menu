@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:regular&display=swap&subset=cyrillic-ext");
+
+/* Стили обнуления */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+body{
+	line-height: 1;
+	font-family: lato;
+	font-weight: 400;
+	font-style: normal;
+}
+.header {
+background-color:aquamarine;
+
+}
+
+.header-container{
+	max-width: 80%;
+	margin: 0px auto;
+}
+.header-menu {
+}
+.menu-list {
+	font-size: 0;
+	text-align: right;
+	
+}
+
+.menu-list>li{
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+	position: relative;
+}
+
+.menu-list>li:last-child{
+	margin-right:0;
+}
+.menu-list>li:hover .submenu-list{
+display: block;
+}
+.menu-list >li:hover .menu-link{
+	color:blue;
+}
+.menu-list > li:last-child .submenu-list{
+	left: auto;
+	right: 0;
+}
+.menu-link {
+	color: rgb(70, 64, 64);
+	font-size: 20px;
+display: inline-block;
+padding: 10px 0px;
+font-weight: 700;
+}
+.submenu-list {
+display: none;
+position: absolute;
+left: 0;
+top: 100%;
+min-width: 250px;
+background-color: rgba(89, 89, 228, 0.597);
+padding: 20px;
+text-align: left;
+}
+.submenu-list>li{
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 30px;
+position: relative;
+}
+.submenu-list>li::before{
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color:blueviolet;
+}
+.submenu-list>li:hover::before{
+	content:"";
+	background-color: pink;
+}
+
+.submenu-list>li:last-child{
+margin-bottom: 0;
+}
+.submenu-list>li:hover .subsubmenu-list{
+display: block;
+}
+.submenu-list >li:hover .submenu-link{
+color:pink;
+}
+.menu-list >li:last-child .submenu-list >li:nth-child(3) .subsubmenu-list{
+	left: auto;
+	right: 0;
+}
+.submenu-link {
+color: blueviolet;
+display: inline-block;
+font-size: 20px;
+}
+.subsubmenu-list {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	min-width: 250px;
+	background-color:pink;
+	padding: 25px;
+}
+.subsubmenu-list li {
+display: inline-block;
+margin: 0px 0px 5px 0px;
+padding: 0px 0px 0px 0px;
+}
+
+.subsubmenu-list li:last-child{
+	margin-bottom: 0;
+}
+.subsubmenu-list li:hover .subsubmenu-link{
+	text-decoration: underline;
+}
+.subsubmenu-link {
+	color: rgb(212, 13, 79);
+	font-size: 20px;
+}
